@@ -5,7 +5,7 @@
 package weka.experiment;
 
 import scavenger.*;
-//import scavenger.java.*;
+import scavenger.app.*;
 
 import java.util.function.Function;
 import java.util.ArrayList;
@@ -55,7 +55,7 @@ public class ScavengerCrossValidationResultProducer extends CrossValidationResul
     public void doRun(int run) throws Exception 
     {        
         System.out.println("ScavengerCrossValidationResultProducer : doRun");
-        ScavengerApp scavengerApp = new ScavengerApp();
+        ScavengerSingleApp scavengerApp = ScavengerSingleApp.getInstance();
         
         if (getRawOutput()) {
             if (m_ZipDest == null) {
@@ -117,7 +117,6 @@ public class ScavengerCrossValidationResultProducer extends CrossValidationResul
         {            
             m_ResultListener.acceptResult(this, keyList.get(i), allResults.get(i).toArray(new Object[allResults.get(i).size()]));
         }
-        scavengerApp.endScavengerApp();
     }
     
     
