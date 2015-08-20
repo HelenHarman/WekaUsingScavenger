@@ -86,22 +86,24 @@ public class ScavengerCrossValidationResultProducer extends CrossValidationResul
             key[2] = "" + (fold + 1);
             System.arraycopy(seKey, 0, key, 3, seKey.length);
             if (m_ResultListener.isResultRequired(this, key)) 
-            {
+            {System.out.println("ScavengerCrossValidationResultProducer : make");
                 keyList.add(key);
                 Instances train = runInstances.trainCV(m_NumFolds, fold, random);
                 Instances test = runInstances.testCV(m_NumFolds, fold);                
                 
+                // Create the scavenger job
                 ScavengerFunction<List<Object>> runScavenger = new GetResults(train, test);
                 List<Object> resultList = new ArrayList<Object>();
-                Computation<List<Object>> computationData = scavengerApp.getComputation().apply("resultList", resultList).cacheGlobally();
+                Computation<List<Object>> computationData = scavengerApp.getComputation().apply("resultList"+"_"+run+"_"+fold, resultList).cacheGlobally();
                 Algorithm<List<Object>, List<Object>> algorithm = scavengerApp.getAlgorithm().expensive("GetResults", runScavenger).cacheGlobally();
                 Computation<List<Object>> computation1 = algorithm.apply(computationData);
                 Future<List<Object>> future = scavengerApp.getScavengerContext().submit(computation1);
                 futures.add(future);
             }
         }
-        Future<Iterable<List<Object>>> allTogether = Futures.sequence(futures, scavengerApp.scavengerContext().executionContext());
         
+        // Wait for all scavenger jobs to finish
+        Future<Iterable<List<Object>>> allTogether = Futures.sequence(futures, scavengerApp.scavengerContext().executionContext());        
         
         List<List<Object>> allResults = new ArrayList<List<Object>>();
         try
@@ -113,6 +115,7 @@ public class ScavengerCrossValidationResultProducer extends CrossValidationResul
             e.printStackTrace(); 
         }
         
+        // pass the results to the result listener
         for(int i = 0; i < keyList.size(); i++)
         {            
             m_ResultListener.acceptResult(this, keyList.get(i), allResults.get(i).toArray(new Object[allResults.get(i).size()]));
@@ -129,18 +132,24 @@ public class ScavengerCrossValidationResultProducer extends CrossValidationResul
             this.train = train;
             this.test = test;
         }
+        
+        
         public List<Object> call()
-        {
-            try {
+        {System.out.println("ScavengerCrossValidationResultProducer : call");
+            
+            try 
+            {
                 Object[] seResults = m_SplitEvaluator.getResult(train, test);
                 Object[] results = new Object[seResults.length + 1];
                 results[0] = getTimestamp();
                 System.arraycopy(seResults, 0, results, 1, seResults.length);
                 return Arrays.asList(results);
-            } catch (Exception ex) {
+            } 
+            catch (Exception ex) 
+            {
                 return new ArrayList<Object>();
-            }
-            
+                
+            }            
         }
     }
     
