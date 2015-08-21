@@ -48,7 +48,10 @@ import weka.experiment.OutputZipper;
 
 import java.util.Random;
 
-
+/**
+ * Performs the same doRun() as CrossValidationResultProducer but makes use of scavenger.
+ * Creates seperate jobs for each call to m_SplitEvaluator.getResult(train, test). 
+ */
 public class ScavengerCrossValidationResultProducer extends CrossValidationResultProducer
 {
     @Override
@@ -86,7 +89,7 @@ public class ScavengerCrossValidationResultProducer extends CrossValidationResul
             key[2] = "" + (fold + 1);
             System.arraycopy(seKey, 0, key, 3, seKey.length);
             if (m_ResultListener.isResultRequired(this, key)) 
-            {System.out.println("ScavengerCrossValidationResultProducer : make");
+            {
                 keyList.add(key);
                 Instances train = runInstances.trainCV(m_NumFolds, fold, random);
                 Instances test = runInstances.testCV(m_NumFolds, fold);                
@@ -94,7 +97,7 @@ public class ScavengerCrossValidationResultProducer extends CrossValidationResul
                 // Create the scavenger job
                 ScavengerFunction<List<Object>> runScavenger = new GetResults(train, test);
                 List<Object> resultList = new ArrayList<Object>();
-                Computation<List<Object>> computationData = scavengerApp.getComputation().apply("resultList"+"_"+run+"_"+fold, resultList).cacheGlobally();
+                Computation<List<Object>> computationData = scavengerApp.getComputation().apply("resultList_"+Arrays.toString(key), resultList).cacheGlobally();
                 Algorithm<List<Object>, List<Object>> algorithm = scavengerApp.getAlgorithm().expensive("GetResults", runScavenger).cacheGlobally();
                 Computation<List<Object>> computation1 = algorithm.apply(computationData);
                 Future<List<Object>> future = scavengerApp.getScavengerContext().submit(computation1);
@@ -131,13 +134,11 @@ public class ScavengerCrossValidationResultProducer extends CrossValidationResul
         {
             this.train = train;
             this.test = test;
-        }
-        
+        }        
         
         public List<Object> call()
-        {System.out.println("ScavengerCrossValidationResultProducer : call");
-            
-            try 
+        {            
+            try // uses same code as CrossValidationResultProducer
             {
                 Object[] seResults = m_SplitEvaluator.getResult(train, test);
                 Object[] results = new Object[seResults.length + 1];

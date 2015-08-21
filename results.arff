@@ -1,0 +1,91 @@
+@relation InstanceResultListener
+
+@attribute Key_Dataset {vote,iris}
+@attribute Key_Run {1}
+@attribute Key_Fold {1,2,3,4,5,6,7,8,9,10}
+@attribute Key_Scheme {weka.classifiers.bayes.BayesNet}
+@attribute Key_Scheme_options {'-Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5'}
+@attribute Key_Scheme_version_ID {746037443258775954}
+@attribute Date_time numeric
+@attribute Number_of_training_instances numeric
+@attribute Number_of_testing_instances numeric
+@attribute Number_correct numeric
+@attribute Number_incorrect numeric
+@attribute Number_unclassified numeric
+@attribute Percent_correct numeric
+@attribute Percent_incorrect numeric
+@attribute Percent_unclassified numeric
+@attribute Kappa_statistic numeric
+@attribute Mean_absolute_error numeric
+@attribute Root_mean_squared_error numeric
+@attribute Relative_absolute_error numeric
+@attribute Root_relative_squared_error numeric
+@attribute SF_prior_entropy numeric
+@attribute SF_scheme_entropy numeric
+@attribute SF_entropy_gain numeric
+@attribute SF_mean_prior_entropy numeric
+@attribute SF_mean_scheme_entropy numeric
+@attribute SF_mean_entropy_gain numeric
+@attribute KB_information numeric
+@attribute KB_mean_information numeric
+@attribute KB_relative_information numeric
+@attribute True_positive_rate numeric
+@attribute Num_true_positives numeric
+@attribute False_positive_rate numeric
+@attribute Num_false_positives numeric
+@attribute True_negative_rate numeric
+@attribute Num_true_negatives numeric
+@attribute False_negative_rate numeric
+@attribute Num_false_negatives numeric
+@attribute IR_precision numeric
+@attribute IR_recall numeric
+@attribute F_measure numeric
+@attribute Area_under_ROC numeric
+@attribute Weighted_avg_true_positive_rate numeric
+@attribute Weighted_avg_false_positive_rate numeric
+@attribute Weighted_avg_true_negative_rate numeric
+@attribute Weighted_avg_false_negative_rate numeric
+@attribute Weighted_avg_IR_precision numeric
+@attribute Weighted_avg_IR_recall numeric
+@attribute Weighted_avg_F_measure numeric
+@attribute Weighted_avg_area_under_ROC numeric
+@attribute Elapsed_Time_training numeric
+@attribute Elapsed_Time_testing numeric
+@attribute UserCPU_Time_training numeric
+@attribute UserCPU_Time_testing numeric
+@attribute Serialized_Model_Size numeric
+@attribute Serialized_Train_Set_Size numeric
+@attribute Serialized_Test_Set_Size numeric
+@attribute Summary string
+@attribute measureExtraArcs numeric
+@attribute measureMissingArcs numeric
+@attribute measureReversedArcs numeric
+@attribute measureDivergence numeric
+@attribute measureBayesScore numeric
+@attribute measureBDeuScore numeric
+@attribute measureMDLScore numeric
+@attribute measureAICScore numeric
+@attribute measureEntropyScore numeric
+
+@data
+
+vote,1,1,weka.classifiers.bayes.BayesNet,'-Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5',746037443258775954,20150821.114,391,44,40,4,0,90.909091,9.090909,0,0.812367,0.089992,0.287678,18.975103,59.08176,42.346182,39.764095,2.582087,0.962413,0.903729,0.058684,34.11964,0.775446,3544.225948,0.888889,24,0.058824,1,0.941176,16,0.111111,3,0.96,0.888889,0.923077,0.973856,0.909091,0.079026,0.920974,0.090909,0.91445,0.909091,0.909868,0.973856,0.012,0.001,0.011674,0.000785,76664,68882,11627,?,0,0,0,0,-3443.817486,-3471.303893,-3481.084829,-3415.601155,-3382.601155
+vote,1,2,weka.classifiers.bayes.BayesNet,'-Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5',746037443258775954,20150821.114,391,44,38,6,0,86.363636,13.636364,0,0.712418,0.125225,0.343478,26.404019,70.541478,42.346182,55.497294,-13.151112,0.962413,1.261302,-0.298889,30.821457,0.700488,3201.622515,0.888889,24,0.176471,3,0.823529,14,0.111111,3,0.888889,0.888889,0.888889,0.958606,0.863636,0.151218,0.848782,0.136364,0.863636,0.863636,0.863636,0.958606,0.053,0.004,0.042084,0.002899,76664,68882,11627,?,0,0,0,0,-3428.196788,-3455.683195,-3465.608051,-3400.124376,-3367.124376
+vote,1,3,weka.classifiers.bayes.BayesNet,'-Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5',746037443258775954,20150821.114,391,44,39,5,0,88.636364,11.363636,0,0.767932,0.107848,0.306805,22.740087,63.009955,42.346182,36.675266,5.670916,0.962413,0.833529,0.128884,32.519224,0.739073,3377.980514,0.851852,23,0.058824,1,0.941176,16,0.148148,4,0.958333,0.851852,0.901961,0.971678,0.886364,0.093335,0.906665,0.113636,0.897159,0.886364,0.887628,0.971678,0.015,0.001,0.014149,0.001603,76664,68882,11627,?,0,0,0,0,-3418.786887,-3446.273294,-3455.844317,-3390.360642,-3357.360642
+vote,1,4,weka.classifiers.bayes.BayesNet,'-Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5',746037443258775954,20150821.114,391,44,39,5,0,88.636364,11.363636,0,0.757709,0.115714,0.323925,24.398671,66.525804,42.346182,24.351399,17.994783,0.962413,0.553441,0.408972,31.80761,0.7229,3304.060542,0.925926,25,0.176471,3,0.823529,14,0.074074,2,0.892857,0.925926,0.909091,0.978214,0.886364,0.136908,0.863092,0.113636,0.885958,0.886364,0.885675,0.978214,0.012,0.002,0.012003,0.00163,76664,68882,11627,?,0,0,0,0,-3437.049508,-3464.535915,-3474.102781,-3408.619106,-3375.619106
+vote,1,5,weka.classifiers.bayes.BayesNet,'-Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5',746037443258775954,20150821.114,391,44,38,6,0,86.363636,13.636364,0,0.724426,0.155838,0.376489,32.858743,77.321094,42.346182,63.611205,-21.265022,0.962413,1.445709,-0.483296,28.269115,0.64248,2936.494368,0.814815,22,0.058824,1,0.941176,16,0.185185,5,0.956522,0.814815,0.88,0.923747,0.863636,0.107645,0.892355,0.136364,0.881329,0.863636,0.865359,0.923747,0.012,0.001,0.011954,0.000835,76664,68882,11627,?,0,0,0,0,-3419.381026,-3446.867433,-3456.514939,-3391.031265,-3358.031265
+vote,1,6,weka.classifiers.bayes.BayesNet,'-Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5',746037443258775954,20150821.114,392,43,40,3,0,93.023256,6.976744,0,0.852571,0.063062,0.238886,13.376775,49.393869,40.982011,24.907114,16.074897,0.95307,0.579235,0.373835,35.264447,0.820103,3659.238403,0.925926,25,0.0625,1,0.9375,15,0.074074,2,0.961538,0.925926,0.943396,0.988426,0.930233,0.066807,0.933193,0.069767,0.932074,0.930233,0.930631,0.988426,0.024,0.002,0.012866,0.001514,76829,69047,11462,?,0,0,0,0,-3464.386436,-3491.872843,-3501.053457,-3435.527637,-3402.527637
+vote,1,7,weka.classifiers.bayes.BayesNet,'-Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5',746037443258775954,20150821.114,392,43,39,4,0,90.697674,9.302326,0,0.805869,0.103649,0.300474,21.986007,62.128194,40.982011,40.151959,0.830052,0.95307,0.933766,0.019304,31.812677,0.73983,3301.063257,0.888889,24,0.0625,1,0.9375,15,0.111111,3,0.96,0.888889,0.923077,0.972222,0.906977,0.080588,0.919412,0.093023,0.912868,0.906977,0.907924,0.972222,0.012,0.001,0.012403,0.000861,76829,69047,11462,?,0,0,0,0,-3436.85283,-3464.339237,-3473.828852,-3408.303031,-3375.303031
+vote,1,8,weka.classifiers.bayes.BayesNet,'-Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5',746037443258775954,20150821.114,392,43,43,0,0,100,0,0,1,0.002819,0.015158,0.592096,3.099711,41.643016,0.182494,41.460522,0.968442,0.004244,0.964198,41.460522,0.964198,4309.705837,1,26,0,0,1,17,0,0,1,1,1,1,1,0,1,0,1,1,1,1,0.038,0,0.01131,0.000737,76829,69047,11462,?,0,0,0,0,-3481.831458,-3509.317866,-3518.503708,-3452.977887,-3419.977887
+vote,1,9,weka.classifiers.bayes.BayesNet,'-Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5',746037443258775954,20150821.114,392,43,39,4,0,90.697674,9.302326,0,0.809313,0.110405,0.308675,23.189692,63.12121,41.643016,44.623904,-2.980887,0.968442,1.037765,-0.069323,32.069448,0.745801,3333.529864,0.884615,23,0.058824,1,0.941176,16,0.115385,3,0.958333,0.884615,0.92,0.961538,0.906977,0.081185,0.918815,0.093023,0.912383,0.906977,0.9077,0.961538,0.012,0,0.011474,0.00067,76829,69047,11462,?,0,0,0,0,-3429.152058,-3456.638465,-3466.093451,-3400.567631,-3367.567631
+vote,1,10,weka.classifiers.bayes.BayesNet,'-Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5',746037443258775954,20150821.114,392,43,37,6,0,86.046512,13.953488,0,0.713969,0.128668,0.347721,27.025699,71.105867,41.643016,64.479152,-22.836136,0.968442,1.499515,-0.531073,30.112084,0.700281,3130.067287,0.846154,22,0.117647,2,0.882353,15,0.153846,4,0.916667,0.846154,0.88,0.952489,0.860465,0.131958,0.868042,0.139535,0.866381,0.860465,0.86155,0.952489,0.01,0.001,0.009432,0.000771,76829,69047,11462,?,0,0,0,0,-3416.865477,-3444.351884,-3454.060617,-3388.534797,-3355.534797
+iris,1,1,weka.classifiers.bayes.BayesNet,'-Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5',746037443258775954,20150821.114,135,15,14,1,0,93.333333,6.666667,0,0.9,0.041668,0.187373,9.375345,39.747759,23.774438,3.233376,20.541061,1.584963,0.215558,1.369404,21.703633,1.446909,1369.346791,1,5,0,0,1,10,0,0,1,1,1,1,0.933333,0.033333,0.966667,0.066667,0.944444,0.933333,0.93266,1,0.01,0.001,0.009382,0.000374,17144,11019,2739,?,0,0,0,0,-377.538233,-423.67888,-437.327611,-399.559039,-373.559039
+iris,1,2,weka.classifiers.bayes.BayesNet,'-Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5',746037443258775954,20150821.114,135,15,15,0,0,100,0,0,1,0.001133,0.002006,0.254908,0.425454,23.774438,0.036844,23.737594,1.584963,0.002456,1.582506,23.737594,1.582506,1497.675418,1,5,0,0,1,10,0,0,1,1,1,1,1,0,1,0,1,1,1,1,0.003,0.001,0.003627,0.000325,17144,11019,2739,?,0,0,0,0,-436.308734,-480.685891,-491.341186,-453.572614,-427.572614
+iris,1,3,weka.classifiers.bayes.BayesNet,'-Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5',746037443258775954,20150821.114,135,15,15,0,0,100,0,0,1,0.002119,0.003267,0.476748,0.692945,23.774438,0.068954,23.705483,1.584963,0.004597,1.580366,23.705483,1.580366,1495.649469,1,5,0,0,1,10,0,0,1,1,1,1,1,0,1,0,1,1,1,1,0.003,0,0.002724,0.000242,17018,11019,2739,?,0,0,0,0,-324.282122,-354.849791,-367.104831,-338.052083,-318.052083
+iris,1,4,weka.classifiers.bayes.BayesNet,'-Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5',746037443258775954,20150821.114,135,15,15,0,0,100,0,0,1,0.002083,0.003994,0.468596,0.847203,23.774438,0.067865,23.706572,1.584963,0.004524,1.580438,23.706572,1.580438,1495.718188,1,5,0,0,1,10,0,0,1,1,1,1,1,0,1,0,1,1,1,1,0.003,0,0.002774,0.000223,17144,11019,2739,?,0,0,0,0,-420.240033,-466.38068,-477.308743,-439.540171,-413.540171
+iris,1,5,weka.classifiers.bayes.BayesNet,'-Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5',746037443258775954,20150821.114,135,15,14,1,0,93.333333,6.666667,0,0.9,0.063668,0.227881,14.32541,48.340789,23.774438,9.792492,13.981945,1.584963,0.652833,0.93213,20.805615,1.387041,1312.688124,1,5,0,0,1,10,0,0,1,1,1,1,0.933333,0.033333,0.966667,0.066667,0.944444,0.933333,0.93266,0.986667,0.003,0,0.002669,0.00018,17081,11019,2739,?,0,0,0,0,-382.172394,-419.644807,-430.95106,-397.5404,-374.5404
+iris,1,6,weka.classifiers.bayes.BayesNet,'-Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5',746037443258775954,20150821.114,135,15,14,1,0,93.333333,6.666667,0,0.9,0.052917,0.173804,11.906346,36.869487,23.774438,2.64878,21.125657,1.584963,0.176585,1.408377,21.220765,1.414718,1338.881187,1,5,0,0,1,10,0,0,1,1,1,1,0.933333,0.033333,0.966667,0.066667,0.944444,0.933333,0.93266,1,0.003,0,0.002691,0.000222,17144,11019,2739,?,0,0,0,0,-438.795957,-483.173114,-493.428625,-455.660053,-429.660053
+iris,1,7,weka.classifiers.bayes.BayesNet,'-Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5',746037443258775954,20150821.114,135,15,13,2,0,86.666667,13.333333,0,0.8,0.077186,0.259081,17.366758,54.959355,23.774438,16.312574,7.461863,1.584963,1.087505,0.497458,19.887537,1.325836,1254.763885,1,5,0,0,1,10,0,0,1,1,1,1,0.866667,0.066667,0.933333,0.133333,0.866667,0.866667,0.866667,0.94,0.002,0,0.001451,0.00012,17020,11019,2739,?,0,0,0,0,-330.063209,-360.630878,-373.365246,-344.312498,-324.312498
+iris,1,8,weka.classifiers.bayes.BayesNet,'-Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5',746037443258775954,20150821.114,135,15,13,2,0,86.666667,13.333333,0,0.8,0.077208,0.242951,17.371706,51.537795,23.774438,12.450677,11.323761,1.584963,0.830045,0.754917,20.149605,1.343307,1271.298549,1,5,0,0,1,10,0,0,1,1,1,1,0.866667,0.066667,0.933333,0.133333,0.866667,0.866667,0.866667,0.94,0.003,0,0.00173,0.000233,17144,11019,2739,?,0,0,0,0,-412.925567,-457.302725,-469.328885,-431.560313,-405.560313
+iris,1,9,weka.classifiers.bayes.BayesNet,'-Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5',746037443258775954,20150821.114,135,15,12,3,0,80,20,0,0.7,0.096199,0.260228,21.644694,55.202772,23.774438,5.45944,18.314998,1.584963,0.363963,1.221,18.705244,1.247016,1180.169484,1,5,0,0,1,10,0,0,1,1,1,1,0.8,0.1,0.9,0.2,0.805556,0.8,0.79798,0.973333,0.002,0,0.001416,0.000144,17079,11019,2739,?,0,0,0,0,-362.578622,-400.051036,-412.290756,-378.880096,-355.880096
+iris,1,10,weka.classifiers.bayes.BayesNet,'-Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5',746037443258775954,20150821.114,135,15,14,1,0,93.333333,6.666667,0,0.9,0.039646,0.151794,8.920462,32.200269,23.774438,2.049393,21.725044,1.584963,0.136626,1.448336,21.822179,1.454812,1376.826208,1,5,0,0,1,10,0,0,1,1,1,1,0.933333,0.033333,0.966667,0.066667,0.944444,0.933333,0.93266,1,0.002,0,0.001472,0.000101,17081,11019,2739,?,0,0,0,0,-367.252422,-404.724835,-417.290786,-383.880126,-360.880126
