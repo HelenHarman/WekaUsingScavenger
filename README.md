@@ -50,15 +50,17 @@ If you have edited the code (or WekaScavenger.zip does not exist) follow the ste
 
 ###Creating the package 
 
-
-1. Create the JAR file (see above).
-2. Create a zip file (WekaScavenger.zip) containg the following files : 
-⋅⋅* src/\*
-⋅⋅* lib/\*
-⋅⋅* build_package.xml
-⋅⋅* Description.props
-⋅⋅* wekaScaavenger-java.jar (JAR file is located at dist/wekaScaavenger-java.jar, but should be in root of zip file)
-
+<ol>
+<li> Create the JAR file (see above).<\li> 
+<li> Create a zip file (WekaScavenger.zip) containg the following files : <\li>
+<ul>
+<li> src/\*<\li>
+<li> lib/\*<\li>
+<li> build_package.xml<\li>
+<li> Description.props<\li>
+<li> wekaScaavenger-java.jar (JAR file is located at dist/wekaScaavenger-java.jar, but should be in root of zip file)<\li>
+<\ul>
+<\ol>
 
 ###Installing the package
 
