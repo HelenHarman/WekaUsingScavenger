@@ -65,6 +65,7 @@ Copy the scavenger.conf file to your Weka home directory.
 Start Seed and Worker nodes via the command line, as shown above.
 
 Running master in Weka :
+
 1. Open the Experimenter window
 2. Select Advanced, then new
 3. From the "Result generator" section, Choose ScavengerCrossValidationResultProducer
