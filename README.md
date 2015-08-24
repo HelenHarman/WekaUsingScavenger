@@ -53,6 +53,7 @@ If you have edited the code (or WekaScavenger.zip does not exist) follow the ste
 
 1. Create the JAR file (see above).
 2. Create a zip file (WekaScavenger.zip) containg the following files : 
+
 ⋅⋅* src/*
 ⋅⋅* lib/*
 ⋅⋅* build_package.xml
