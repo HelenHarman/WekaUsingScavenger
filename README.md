@@ -48,11 +48,11 @@ Creating the package
 
 Create the JAR file.
 Create a zip file containing the following in the root directory : 
-    - src/*
-    - lib/*
-    - build_package.xml
-    - Description.props
-    - wekaScaavenger-java.jar (the JAR file located at dist/wekaScaavenger-java.jar)
+- src/*
+- lib/*
+- build_package.xml
+- Description.props
+- wekaScaavenger-java.jar (the JAR file located at dist/wekaScaavenger-java.jar)
 
 
 
@@ -65,10 +65,10 @@ Copy the scavenger.conf file to your Weka home directory.
 Start Seed and Worker nodes via the command line, as shown above.
 
 Running master in Weka :
-    1. Open the Experimenter window
-    2. Select Advanced, then new
-    3. From the "Result generator" section, Choose ScavengerCrossValidationResultProducer
-    4. The rest of the options can be selected as usual (http://weka.sourceforge.net/doc.dev/weka/experiment/CrossValidationSplitResultProducer.html) 
+1. Open the Experimenter window
+2. Select Advanced, then new
+3. From the "Result generator" section, Choose ScavengerCrossValidationResultProducer
+4. The rest of the options can be selected as usual (http://weka.sourceforge.net/doc.dev/weka/experiment/CrossValidationSplitResultProducer.html) 
 
 
 Note : I have to run Weka.jar rather than the Weka.app due to a "Usupported major.minor version 52.0" error.
