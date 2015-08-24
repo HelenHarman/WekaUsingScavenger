@@ -17,10 +17,10 @@ Title=wekaScavenger
 Category=Experimenter
 
 # Author (required)
-Author=Joe Dev <joe@somewhere.net>,Dev2 <dev2@somewhereelse.net>,...
+Author=Andrey Tyukin <tyukiand@students.uni-mainz.de>, Helen Harman <heharman@uni-mainz.de>
 
 # Maintainer (required)
-Maintainer=Joe Dev <joe@somewhere.net>
+Maintainer=Andrey Tyukin <tyukiand@students.uni-mainz.de>, Helen Harman <heharman@uni-mainz.de>
 
 # License (required)
 License=GPL 2.0|Mozilla
@@ -28,11 +28,15 @@ License=GPL 2.0|Mozilla
 # Description (required)
 Description=A one paragraph description of the package.
 
+# Dependencies (format: packageName (equality/inequality version_number),packageName1 (=x.y.z), packageName2 (>u.v.w|<=x.y.z),...
+Depends=weka (>=3.7.1)
+
+
 # Package URL for obtaining the package archive (required)
-#PackageURL=https://github.com/HelenHarman/WekaUsingScavenger
+PackageURL=https://github.com/HelenHarman/WekaUsingScavenger
 
 # URL for further information
-#URL=http://somewhere.net/funkyResearchInfo.html
+URL=https://github.com/joergwicker/scavenger/tree/javaDevUnstable
 
 # Enhances various other packages ?
 #Enhances=packageName1,packageName2,...
@@ -40,8 +44,7 @@ Description=A one paragraph description of the package.
 # Related to other packages?
 #Related=packageName1,packageName2,...
 
-# Dependencies (format: packageName (equality/inequality version_number),packageName1 (=x.y.z), packageName2 (>u.v.w|<=x.y.z),...
-Depends=weka (>=3.7.1)
+
 
 # Message to display in installation. Can be used to provide
 # special instructions (e.g. manual stuff needed to complete

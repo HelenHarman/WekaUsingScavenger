@@ -7,8 +7,6 @@ Scavenger : https://github.com/joergwicker/scavenger/tree/javaDevUnstable
 
 Weka : http://www.cs.waikato.ac.nz/ml/index.html
 
-Known to work with Weka version 3.7.12.
-
 ##Compile and Run
 
 
@@ -54,8 +52,8 @@ If you have edited the code (or WekaScavenger.zip does not exist) follow the ste
 <li> Create the JAR file (see above).</li> 
 <li> Create a zip file (WekaScavenger.zip) containg the following files : </li>
 <ul>
-<li> src/\*</li>
-<li> lib/\*</li>
+<li> src/*</li>
+<li> lib/*</li>
 <li> build_package.xml</li>
 <li> Description.props</li>
 <li> wekaScaavenger-java.jar (JAR file is located at dist/wekaScaavenger-java.jar, but should be in root of zip file)</li>
