@@ -9,7 +9,7 @@ Weka : http://www.cs.waikato.ac.nz/ml/index.html
 
 ##Compile and Run
 
-This package msu be compile using Java 8. (java.util.function.Function is not avaliable in Java 7)
+This package must be compile using Java 8. (java.util.function.Function is not avaliable in Java 7)
 lib/ directory must contain the scavenger and WEKA JAR files.
 
 Create JAR file :
