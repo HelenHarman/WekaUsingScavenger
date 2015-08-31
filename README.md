@@ -19,24 +19,26 @@ Create JAR file :
 ant
 ```
 
+For the following commands the classpath should contain *dist/<version>/<version>.jar*. For example *dist/2015.08.31/2015.08.31.jar*
+
 Run a scavenger seed :
 
 ```
-java -cp dist/wekaScavenger-java.jar scavenger.app.SeedMain
+java scavenger.app.SeedMain
 
 ```
 
 Run a scavenger worker :
 
 ```
-java -cp dist/wekaScavenger-java.jar scavenger.app.WorkerMain
+java scavenger.app.WorkerMain
 
 ```
 
 Run the ExperimentDemo :
 
 ```
-java -cp dist/wekaexamples-java.jar wekaexamples.experiment.ExperimentDemo -classifier weka.classifiers.trees.J48 -exptype classification -splittyperossvalidation -runs 10 -folds 10 -result results.arff -t vote.arff -t iris.arff
+java wekaexamples.experiment.ExperimentDemo -classifier weka.classifiers.trees.J48 -exptype classification -splittyperossvalidation -runs 10 -folds 10 -result results.arff -t vote.arff -t iris.arff
 ```
 
 ##Using Weka
@@ -44,7 +46,7 @@ java -cp dist/wekaexamples-java.jar wekaexamples.experiment.ExperimentDemo -clas
 
 To run WekaScavenger from within Weka a package should be created and installed into Weka. 
 
-If you have edited the code (or WekaScavenger.zip does not exist) follow the steps in "Creating the package", otherwise skip "Creating the package".
+If you have edited the code follow the steps in "Creating the package", otherwise skip "Creating the package".
 
 
 ###Creating the package 
@@ -61,7 +63,7 @@ This package can be installed using the Weka package manager (https://weka.wikis
 
 1. Tools > Package Manger
 2. Click File/URL (located in top right)
-3. Select the WekaScavenger.zip and click OK. (Don't forget to restart Weka)
+3. Select the dist/2015.08.31.zip and click OK. (Don't forget to restart Weka)
 4. Copy the scavenger.conf file to your Weka home directory.
 
 ###Running WekaScavenger
