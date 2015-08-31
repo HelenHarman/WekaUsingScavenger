@@ -19,7 +19,7 @@ Create JAR file :
 ant
 ```
 
-For the following commands the classpath should contain *dist/<version>/<version>.jar*. For example *dist/2015.08.31/2015.08.31.jar*
+For the following commands the classpath should contain *dist/\<version\>/\<version\>.jar*. For example *dist/2015.08.31/2015.08.31.jar*
 
 Run a scavenger seed :
 
