@@ -10,7 +10,8 @@ Weka : http://www.cs.waikato.ac.nz/ml/index.html
 ##Compile and Run
 
 This package must be compile using Java 8. (java.util.function.Function is not avaliable in Java 7)
-lib/ directory must contain the scavenger and WEKA JAR files.
+
+To compile the package the lib/ directory must contain the scavenger and WEKA JAR files.
 
 Create JAR file :
 
@@ -48,17 +49,11 @@ If you have edited the code (or WekaScavenger.zip does not exist) follow the ste
 
 ###Creating the package 
 
-<ol>
-<li> Create the JAR file (see above).</li> 
-<li> Create a zip file (WekaScavenger.zip) containg the following files : </li>
-<ul>
-<li> src/*</li>
-<li> lib/*</li>
-<li> build_package.xml</li>
-<li> Description.props</li>
-<li> wekaScaavenger-java.jar (JAR file is located at dist/wekaScaavenger-java.jar, but should be in root of zip file)</li>
-</ul>
-</ol>
+Run the following command :
+
+```
+ant make_package -Dpackage=2015.08.31
+```
 
 ###Installing the package
 
