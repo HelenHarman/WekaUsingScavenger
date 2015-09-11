@@ -27,7 +27,7 @@ ant make_package -Dpackage=2015.08.31
 
 ###Running From Command Line
 
-For the following commands the classpath should contain *dist/\<version\>/\<version\>.jar* and *lib/\**. For example *dist/2015.08.31/2015.08.31.jar:lib/\**
+For the following commands the classpath should contain *dist/\<version\>/\<version\>.jar* and _lib/\*_. For example _dist/2015.08.31/2015.08.31.jar:lib/\*_
 
 Run a scavenger seed :
 
