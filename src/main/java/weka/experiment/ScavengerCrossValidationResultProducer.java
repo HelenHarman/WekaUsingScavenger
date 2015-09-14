@@ -125,7 +125,9 @@ public class ScavengerCrossValidationResultProducer extends CrossValidationResul
         }
     }
     
-    
+    /**
+     * Allows m_SplitEvaluator.getResult(train, test) to be run in a scavenger job
+     */
     class GetResults extends ScavengerFunction<List<Object>> 
     {
         Instances train;
